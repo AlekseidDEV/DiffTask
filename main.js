@@ -1,3 +1,5 @@
+'use strict'
+
 const namePerson = prompt('Ваше имя', "Артем")
 
 const result = namePerson === "Артем" ? 'Директор' :
