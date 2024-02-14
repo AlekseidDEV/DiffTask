@@ -10,7 +10,7 @@ switch(true){
         console.log('Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье');
         break;
 
-    case lang.toUpperCase() === 'RU':
+    case lang.toUpperCase() === 'EN':
         console.log('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
         break;
 
