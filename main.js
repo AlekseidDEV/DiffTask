@@ -1,9 +1,21 @@
-const num = 266219
+const namePerson = prompt('Ваше имя', "Артем")
 
-const arrayMult = String(num).split('').reduce((a, b) => {
-    return +a * +b
-})
+const result = namePerson === "Артем" ? 'Директор' :
+    namePerson === "Александр" ? 'Преподаватель' : "Студент"
 
-const degreeOf = arrayMult ** 3
+const lang = prompt('RU or EN')
 
-console.log(String(degreeOf).slice(0, 2));
+switch(true){
+    case lang.toUpperCase() === 'RU':
+        console.log('Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье');
+        break;
+
+    case lang.toUpperCase() === 'RU':
+        console.log('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
+        break;
+
+    default:
+        console.log('ты помоему перепутал');
+}
+
+console.log(result);
