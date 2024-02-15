@@ -1,23 +1,13 @@
 'use strict';
 
-const namePerson = prompt('Ваше имя', "Артем")
+const value = 'Lorem ipsum dolor sit amet consectetur adipisicing elit'
 
-const result = namePerson === "Артем" ? 'Директор' :
-    namePerson === "Александр" ? 'Преподаватель' : "Студент"
-
-const lang = prompt('RU or EN')
-
-switch(true){
-    case lang.toUpperCase() === 'RU':
-        console.log('Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье');
-        break;
-
-    case lang.toUpperCase() === 'EN':
-        console.log('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
-        break;
-
-    default:
-        console.log('ты помоему перепутал');
+const checkStr = (str) => {
+    if (typeof str !== 'string') {
+        alert('неа, не пойдет')
+    } else if (str.length > 30) {
+        console.log(str.trim().slice(0, 30) + '...');
+    }
 }
 
-console.log(result);
+checkStr(value)
