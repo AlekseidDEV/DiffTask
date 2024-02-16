@@ -14,17 +14,26 @@ const enArrDay = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 
 const arrDays = [ruArrDay, enArrDay]
 
-switch(lang.toUpperCase()){
-    case 'RU':
-        console.log(arrDays[0]);
-        break;
 
-    case 'EN':
-        console.log(arrDays[1]);
-        break;
-
-    default:
-        console.log('ты помоему перепутал');
+if(lang.toUpperCase() === 'RU'){
+    console.log(arrDays[0]);
+} else if(lang.toUpperCase() === 'EN'){
+    console.log(arrDays[1]);
+} else{
+    console.log('ты помоему перепутал');
 }
+
+// switch(lang.toUpperCase()){
+//     case 'RU':
+//         console.log(arrDays[0]);
+//         break;
+
+//     case 'EN':
+//         console.log(arrDays[1]);
+//         break;
+
+//     default:
+//         console.log('ты помоему перепутал');
+// }
 
 console.log(result);
