@@ -5,15 +5,22 @@ const namePerson = prompt('Ваше имя', "Артем")
 const result = namePerson === "Артем" ? 'Директор' :
     namePerson === "Александр" ? 'Преподаватель' : "Студент"
 
+
+
 const lang = prompt('RU or EN')
 
-switch(true){
-    case lang.toUpperCase() === 'RU':
-        console.log('Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье');
+const ruArrDay = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+const enArrDay = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
+const arrDays = [ruArrDay, enArrDay]
+
+switch(lang.toUpperCase()){
+    case 'RU':
+        console.log(arrDays[0]);
         break;
 
-    case lang.toUpperCase() === 'EN':
-        console.log('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
+    case 'EN':
+        console.log(arrDays[1]);
         break;
 
     default:
