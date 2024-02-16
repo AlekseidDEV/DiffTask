@@ -12,7 +12,6 @@ const enArrDay = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 
 const arrDays = [ruArrDay, enArrDay]
 
-
 if(lang.toUpperCase() === 'RU'){
     console.log(arrDays[0]);
 } else if(lang.toUpperCase() === 'EN'){
