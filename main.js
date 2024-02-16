@@ -5,8 +5,6 @@ const namePerson = prompt('Ваше имя', "Артем")
 const result = namePerson === "Артем" ? 'Директор' :
     namePerson === "Александр" ? 'Преподаватель' : "Студент"
 
-
-
 const lang = prompt('RU or EN')
 
 const ruArrDay = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
