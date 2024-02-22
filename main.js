@@ -1,20 +1,30 @@
 'use strict';
 
-const arr = [285, 475, 541, 420, 652, 201, 800]
+const dayContainer = document.querySelector('.days')
 
-arr.forEach((num) => {
-    if (String(num).slice(0, 1) === '2' ||
-        String(num).slice(0, 1) === '4'
-    ){
-        console.log(num);
-    }
-})
+const week = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
+const data = new Date()
+const currentData = data.getDay()
 
-exitCycle:
-for(let i = 2; i <= 100; i++){
-    for(let f = 2; f < i; f++){
-        if(i % f === 0) continue exitCycle
-    }
-    console.log(`делители этого числа 1 и ${i}`);
+const setClassday = () => {
+    const allDay = dayContainer.querySelectorAll('p')
+
+    allDay.forEach((day, index) => {
+        if (index !== 5 && index !== 6 && index !== Number(currentData)) {
+            day.classList.add('ordinary_day')
+        } else if (index === Number(currentData)) {
+            day.classList.add('current_day')
+        } else {
+            day.classList.add('day_off')
+        }
+    })
 }
 
+for (let item = 1; item <= week.length; item++) {
+    const newParag = document.createElement('p')
+    newParag.textContent = week[item % week.length]
+
+    dayContainer.append(newParag)
+}
+
+setClassday()
