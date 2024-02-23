@@ -10,11 +10,11 @@ const setClassday = () => {
     const allDay = dayContainer.querySelectorAll('p')
 
     allDay.forEach((day, index) => {
-        if (index !== 5 && index !== 6 && index !== Number(currentData)) {
-            day.classList.add('ordinary_day')
-        } else if (index === Number(currentData)) {
+        if(day.textContent === week[currentData]){
             day.classList.add('current_day')
-        } else {
+        } else if(index !== 5 && index !== 6){
+            day.classList.add('ordinary_day')
+        } else if(index > 4) {
             day.classList.add('day_off')
         }
     })
